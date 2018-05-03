@@ -1,2 +1,2 @@
 ![SENASISTENCIA logo](imagenes/logo.png)
-# Sistema de control de asistencia de prendices
+# Sistema de control de asistencia de aprendices
