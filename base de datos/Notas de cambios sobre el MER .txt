@@ -1,0 +1,43 @@
+*Se eliminaron 2 tablas.
+-Trimestre
+-Jornada
+*Esas 2 tablas se ingresaron como campos en la tabla FICHA
+*También se ingreso el campo GRUPO
+*En la tabla excusa se agrega el campo.
+-FechaInicio_Excusa
+-FechaFin_Excusa
+Y se elimina el campo periodo y fecha
+*En la tabla asistencia se cambio.
+
+Descripción_Asistencia -> Tipo de dato = varchar
+(A)
+Asistencia -> Tipo de dato = Bool
+
+*En la tabla usuario se agrega el campo.
+-FechaDeCreacion_Usuario
+-FechaDeInactivacion_Usuario
+
+
+*En la tabla programa de formacion se agrega el campo.
+-FechaDeCreacion_ProgramaFormacion
+-FechaDeInactivacion_ProgramaFormacion
+
+*Se pusieron como opcional los campos 
+
+-FechaDeInactivacion
+
+de todas las tablas 
+
+
+*Se ingresaron los comentarios que faltaban de algunos campos.
+
+*A la tabla CARGO se le cambio el nombre a PERFIL
+*A la tabla PERFIL se le cambio el nombre a ROL 
+
+*En la tabla Tipo de documento se elimino el campo Nomenclatura.
+*A la tabla Excusa se ingresa el campo Comentario_Excusa -> Tipo de dato = Varchar (600)
+*Al campo Mensaje_Notificacion se le cambio el tamaño de caracteres de (500) a (600)
+*A la tabla excusa se le agrega el campo Url_Excusa -> Tipo de dato VARCHAR (500)
+*Se elimino la tabla formato
+*En la tabla asistencia el campo Estado_asistencia cambio de tipo de dato de BOOL a INT
+*
