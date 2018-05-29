@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="senasistencia Data Dictionary." />
+    <title>senasistencia Diccionario de Datos</title>
+    <style type="text/css">
+    table{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    abbr{
+        cursor: help;
+    }
+    table, td, th{
+        border-style: solid;
+        border-width: 1px;
+    }
+    table caption{
+        font-size: 120%;
+        font-weight: bold;
+    }
+    caption{
+        color: black;
+    }
+    td, th{
+        border-color: silver;
+    }
+    tr:hover{
+        color: #333;
+        background-color: #F2F2F2;
+    }
+    th{
+        background-color: #4caf50;
+    }
+    td{
+        color:black;
+    }
+    ul{
+        font-style: italic;
+    }
+    #title-sect{
+        color: gray;
+        text-align: right;
+    }
+    .proj-desc{
+        text-align: right;
+    }
+    .titulo{
+        text-align:center;
+        color: firebrick;
+    }
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1 class="titulo">SENASISTENCIA<br> Diccionario de datos</h1>
+<p class="proj-desc">
+<em></em>
+</p>
+</div>
+<h2>Indice Alfabetico</h2>
+<ul>
+<li><a href='#aprendiz'>aprendiz</a></li>
+<li><a href='#asistencia'>asistencia</a></li>
+<li><a href='#cliente'>cliente</a></li>
+<li><a href='#cliente_ficha'>cliente_ficha</a></li>
+<li><a href='#cliente_rol'>cliente_rol</a></li>
+<li><a href='#excusa'>excusa</a></li>
+<li><a href='#excusa_asistencia'>excusa_asistencia</a></li>
+<li><a href='#ficha'>ficha</a></li>
+<li><a href='#notificacion'>notificacion</a></li>
+<li><a href='#perfil'>perfil</a></li>
+<li><a href='#programa_formacion'>programa_formacion</a></li>
+<li><a href='#registro_notificacion'>registro_notificacion</a></li>
+<li><a href='#rol'>rol</a></li>
+<li><a href='#tipo_de_documento'>tipo_de_documento</a></li>
+<li><a href='#usuario'>usuario</a></li>
+</ul>
+<table id='aprendiz'>
+<caption>aprendiz</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>FK_TipoDeDocumento</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_TipoDeDocumento de la tabla Tipo de documento</td>
+</tr>
+<tr>
+    <td>Documento_Aprendiz</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>PrimerNombre_Aprendiz</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Primer nombre del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>SegundoNombre_Aprendiz</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Segundo nombre del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>PrimerApellido_Aprendiz</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Primer apellido del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>SegundoApellido_Aprendiz</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Segundo apellido del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>Correo_Aprendiz</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Correo del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>Telefono_Aprendiz</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero telefonico del aprendiz.</td>
+</tr>
+<tr>
+    <td>FK_Ficha</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_FICHA de la tabla FICHA.</td>
+</tr>
+<tr>
+    <td>Estado_Aprendiz</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Aprendiz</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de Creacion del APRENDIZ en el sistema.</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Aprendiz</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de Inactivacion del APRENDIZ en el sistema.</td>
+</tr>
+<table id='asistencia'>
+<caption>asistencia</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Asistencia</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del ASISTENCIA.</td>
+</tr>
+<tr>
+    <td>FK_DocAprendiz</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>Estado_Asistencia</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Registro de la asistencia del aprendiz ((1-Asistio),(0-falla) o (2-excusa)</td>
+</tr>
+<tr>
+    <td>Fecha_Asistencia</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha del registro de la asistencia</td>
+</tr>
+<table id='cliente'>
+<caption>cliente</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>FK_TipoDeDocumento</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_TipoDeDocumento de la tabla tipo de documento.</td>
+</tr>
+<tr>
+    <td>Documento_Cliente</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del CLIENTE.</td>
+</tr>
+<tr>
+    <td>PrimerNombre_Cliente</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Primer nombre del CLIENTE.</td>
+</tr>
+<tr>
+    <td>SegundoNombre_Cliente</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Segundo nombre del CLIENTE.</td>
+</tr>
+<tr>
+    <td>PrimerApellido_Cliente</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Primer apellido del CLIENTE.</td>
+</tr>
+<tr>
+    <td>SegundoApellido_Cliente</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Segundo apellido del CLIENTE.</td>
+</tr>
+<tr>
+    <td>Correo_Cliente</td>
+    <td>VARCHAR(60)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Correo del CLIENTE.</td>
+</tr>
+<tr>
+    <td>Telefono_Cliente</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de telefono del CLIENTE.</td>
+</tr>
+<tr>
+    <td>FK_Perfil</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Perfil de la tabla perfil</td>
+</tr>
+<tr>
+    <td>Estado_Cliente</td>
+    <td>BIT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Cliente</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de creacion del cliente en el sistema.</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Cliente</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de la inactivacion del CLIENTE.</td>
+</tr>
+<table id='cliente_ficha'>
+<caption>cliente_ficha</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>FK_DocCliente</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del CLIENTE.</td>
+</tr>
+<tr>
+    <td>FK_Ficha</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Ficha de la tabla FICHA.</td>
+</tr>
+<table id='cliente_rol'>
+<caption>cliente_rol</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>FK_DocCliente</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del CLIENTE.</td>
+</tr>
+<tr>
+    <td>FK_Rol</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al ID_Rol de la tabla ROL.</td>
+</tr>
+<table id='excusa'>
+<caption>excusa</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Excusa</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del EXCUSA.</td>
+</tr>
+<tr>
+    <td>FechaInicio_Excusa</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha en la cual inicia la EXCUSA.</td>
+</tr>
+<tr>
+    <td>FechaFin_Excusa</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha fin de la excusa</td>
+</tr>
+<tr>
+    <td>Comentario_Excusa</td>
+    <td>VARCHAR(600)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Comentarios al respecto sobre la excusa.</td>
+</tr>
+<tr>
+    <td>Url_Excusa</td>
+    <td>VARCHAR(500)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Ruta del servidor donde se va a guardar el archivo o los archivos de la excusa.</td>
+</tr>
+<table id='excusa_asistencia'>
+<caption>excusa_asistencia</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>FK_Excusa</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Excusa de la tabla EXCUSA.</td>
+</tr>
+<tr>
+    <td>FK_Asistencia</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Asistencia de la tabla ASISTENCIA.</td>
+</tr>
+<table id='ficha'>
+<caption>ficha</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Ficha</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos de la FICHA.</td>
+</tr>
+<tr>
+    <td>FK_Programa</td>
+    <td>BIGINT(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_PROGRAMA de la tabla Programa_Formacion.</td>
+</tr>
+<tr>
+    <td>Num_Ficha</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero con el cual se identifica la FICHA.</td>
+</tr>
+<tr>
+    <td>Grupo_Ficha</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo se realiza con el fin de mostrar el numero de grupo al cual pertenece la ficha.</td>
+</tr>
+<tr>
+    <td>Jornada_Ficha</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo se realiza con el fin de mostrar la jornada a la cual pertenece la ficha.</td>
+</tr>
+<tr>
+    <td>Trimestre_Ficha</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo se realiza con el fin de mostrar el trimestre en el cual se encuentra la ficha.</td>
+</tr>
+<tr>
+    <td>Estado_Ficha</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Ficha</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de Creacion de la FICHA en el sistema.</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Ficha</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de Inactivacion de la FICHA en el sistema.</td>
+</tr>
+<table id='notificacion'>
+<caption>notificacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Notificacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos de la notificacion.
+</td>
+</tr>
+<tr>
+    <td>Asunto_Notificacion</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo contendra el ASUNTO que llevara la notificacion.</td>
+</tr>
+<tr>
+    <td>Mensaje_Notificacion</td>
+    <td>VARCHAR(3000)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo contendra el CUERPO DEL MENSAJE de la notificacion.</td>
+</tr>
+<table id='perfil'>
+<caption>perfil</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Perfil</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del CARGO.</td>
+</tr>
+<tr>
+    <td>Tipo_Perfil</td>
+    <td>VARCHAR(40)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Cargo que ejerce.</td>
+</tr>
+<tr>
+    <td>Estado_Perfil</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Perfil</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de la Creacion del Perfil en el sistema</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Perfil</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de Inactivacion del Perfil en el sistema</td>
+</tr>
+<table id='programa_formacion'>
+<caption>programa_formacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Programa</td>
+    <td>BIGINT(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del PROGRAMA DE FORMACION.</td>
+</tr>
+<tr>
+    <td>Nombre_Programa</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Nombre del PROGRAMA DE FORMACION.</td>
+</tr>
+<tr>
+    <td>Estado_Programa</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Programa</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de creacion del Programa de formacion en el sistema
+</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Programa</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de inactivacion del Programa de formacion en el sistema</td>
+</tr>
+<table id='registro_notificacion'>
+<caption>registro_notificacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Registro</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos de la NOTIFICACION.</td>
+</tr>
+<tr>
+    <td>Fecha_Registro</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este campo contendra la FECHA DE ENVIO de la notificacion.</td>
+</tr>
+<tr>
+    <td>FK_DocAprendiz</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del APRENDIZ.</td>
+</tr>
+<tr>
+    <td>FK_Asistencia</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Asistencia de la tabla ASISTENCIA .</td>
+</tr>
+<tr>
+    <td>FK_DocCliente</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Numero de documento del CLIENTE.</td>
+</tr>
+<tr>
+    <td>FK_Notificacion</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Este ID corresponde al campo ID_Notificacion de la tabla NOTIFICACION.</td>
+</tr>
+<table id='rol'>
+<caption>rol</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Rol</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del PERFIL.</td>
+</tr>
+<tr>
+    <td>Tipo_Rol</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>ROL para asignacion de permisos en el SOFTWARE.(administrador y usuario).</td>
+</tr>
+<tr>
+    <td>Estado_Rol</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td> Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Rol</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de creacion del Rol en el sistema</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Rol</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de inactivacion del Rol en el sistema</td>
+</tr>
+<table id='tipo_de_documento'>
+<caption>tipo_de_documento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_TipoDeDocumento</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del TIPO DEL DOCUMENTO.</td>
+</tr>
+<tr>
+    <td>Nombre_TipoDeDocumento</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Nombre del Tipo de documento (Cedula de ciudadania,Targeta de identidad o cedula extranjera)</td>
+</tr>
+<tr>
+    <td>Estado_TipoDeDocumento</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_TipoDeDocumento</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de creacion del TIPO DE DOCUMENTO.</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_TipoDeDocumento</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de la inactivacion del TIPO DE DOCUMENTO.</td>
+</tr>
+<table id='usuario'>
+<caption>usuario</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Nombre de Columna</th>
+    <th>Tipo de Dato</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Foreing Key'>FK</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+
+    <th>Comentario</th>
+</tr>
+<tr>
+    <td>ID_Usuario</td>
+    <td>BIGINT(16)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+
+    <td>Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del USUARIO.
+</td>
+</tr>
+<tr>
+    <td>FK_DocCliente</td>
+    <td>BIGINT(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Documento del CLIENTE.</td>
+</tr>
+<tr>
+    <td>Password_Usuario</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Password que se asigna a la persona al momento del registro.</td>
+</tr>
+<tr>
+    <td>Estado_Usuario</td>
+    <td>TINYINT(1)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Indica si el registro esta Activo o Inactivo.</td>
+</tr>
+<tr>
+    <td>FechaDeCreacion_Usuario</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de creacion del Usuario en el sistema</td>
+</tr>
+<tr>
+    <td>FechaDeInactivacion_Usuario</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+
+    <td>Fecha de inactivacion del Usuario en el sistema</td>
+</tr>
+</table>
+</body>
+</html>
