@@ -126,7 +126,7 @@ FK_Notificacion INT FOREIGN KEY REFERENCES notificacion(ID_Notificacion)
 --Tablas intermedias de las relaciones muchos a muchos
 
 --Relacion entre la tabla cliente y Ficha
-CREATE TABLE cliente_Ficha(
+CREATE TABLE cliente_ficha(
 FK_DocCliente BIGINT FOREIGN KEY REFERENCES cliente(Documento_Cliente),
 FK_Ficha BIGINT FOREIGN KEY REFERENCES ficha(ID_Ficha)
 )
